@@ -10,18 +10,11 @@ fun main(){
     if (age >18){
         print("Are you a member? (yes/no): ")
         val isMember = readln().equals("yes", ignoreCase = true)
+        print("Enter your member number : ")
+        val memberNo = readln()
+        println("Confirmation message" + " " + memberNo)
+        print ("Do you have a VIP pass (yes/no) :  ")
+        val hasVipPass = readln().equals("Yes" , ignoreCase = true)
     }
-    print("Enter your member number : ")
-    val memberNo = readln()
-    println("Confirmation message" + memberNo)
-    print ("Do you have a VIP pass (yes/no) ")
-    val hasVipPass = readln().equals("Yes" , ignoreCase = true)
-    if (hasVipPass = true) {
-        println("Vip lounge access is granted")
-
-    }
-    println(age)
-    println(hasVipPass)
-
 
 }

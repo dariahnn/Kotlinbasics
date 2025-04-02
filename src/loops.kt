@@ -40,7 +40,49 @@ fun main(){
         println(j)
         j++
     }while (j <= 5)
-
+    // NESTED LOOP : a loop inside a loop
+//    for every iteration of the outer loop , the inner loop must complete its set of iteration
+    for (i in 1..3) {//outer loop
+        println("$i : outer loop")
+        for (j in 1..3) {//inner loop
+            println("$j : inner loop")
+        }
+    }
+//    LOOP CONTROL STATEMENTS : break , continue ,
+//    labels(outer and inner)
+    // break : it terminates the loop when a condition is met
+    for (i in 1..10){
+        if (i == 5){
+            break
+        }
+        println(i)
+    }
+    // continue : if the condition is met it skips the iteration
+    for (i in 1..10){
+        if (i == 5){
+            continue
+        }
+        println(i)
+    }
+    // label statements outer and inner
+    outer@ for (i in 1..3){
+        inner@ for (j in 1..3){
+            if (i == 2 && j==2){
+              break@outer
+            }
+            println("i=$i , j=$j")
+        }
+    }
+    // foreach : iterate / loop over collections
+    // we use the keyword it to reference in the collection
+    val numbers = listOf(1,2,3,4,5)
+    val names = listOf("Joseph","Alice","Doe")
+    numbers.forEach{
+        println("$it")
+    }
+    names.forEach{
+        converttoUpper(it)
+    }
 }
 fun converttoUpper(i: String){
     println(i.uppercase())
